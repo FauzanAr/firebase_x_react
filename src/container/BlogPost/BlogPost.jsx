@@ -18,7 +18,7 @@ class BlogPost extends Component{
     ambilDataDariServerAPI = () => {                // fungsi untuk mengambil data dari API dengan penambahan sort dan order
         let ref = firebase.database().ref("/");
         ref.on("value", snapshot => {
-            const state = snapshop.val();
+            const state = snapshot.val();
             this.setState(state);
         });
     }
